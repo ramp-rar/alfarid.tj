@@ -1,0 +1,8 @@
+<Project>
+  <Import Project="build/version.props" Condition="Exists('build/version.props')" />
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+</Project>

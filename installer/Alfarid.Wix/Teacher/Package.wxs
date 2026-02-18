@@ -1,0 +1,23 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="Alfarid Teacher" Manufacturer="Alfarid" Version="0.1.0.0" UpgradeCode="{11111111-1111-1111-1111-111111111111}">
+    <MajorUpgrade DowngradeErrorMessage="A newer version is already installed." />
+    <MediaTemplate />
+
+    <StandardDirectory Id="ProgramFilesFolder">
+      <Directory Id="INSTALLFOLDER" Name="Alfarid">
+        <Directory Id="TEACHERFOLDER" Name="Teacher" />
+      </Directory>
+    </StandardDirectory>
+
+    <ComponentGroup Id="TeacherComponents" Directory="TEACHERFOLDER">
+      <Component>
+        <File Source="$(var.TeacherBuildDir)\Alfarid.Teacher.exe" />
+        <File Source="$(var.TeacherBuildDir)\Alfarid.Teacher.dll" />
+      </Component>
+    </ComponentGroup>
+
+    <Feature Id="Main" Title="Alfarid Teacher" Level="1">
+      <ComponentGroupRef Id="TeacherComponents" />
+    </Feature>
+  </Package>
+</Wix>
