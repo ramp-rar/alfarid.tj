@@ -1,0 +1,11 @@
+<Window x:Class="Alfarid.Student.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Alfarid Student" Height="300" Width="500" Background="#1E2228">
+    <Grid Margin="16">
+        <StackPanel>
+            <TextBlock Text="Student client status" Foreground="White" FontSize="18" Margin="0,0,0,12" />
+            <TextBlock Text="{Binding Status}" Foreground="#D9DCE1" TextWrapping="Wrap" />
+        </StackPanel>
+    </Grid>
+</Window>
